@@ -1,0 +1,29 @@
+echo =================================================
+echo sytem performance 
+echo =================================================
+
+#1 total cpu usage 
+
+echo "#1 cpu usage" 
+top -bn1 | grep "Cpu(s)"
+
+#2 total memory usage 
+
+echo "#2 mem useage"
+free -h
+
+#3 total disk useage
+
+echo "#3 disk useage"
+df -h /
+
+#4 top 5 process by cpu
+
+echo "#4 top 5 cpu"
+ps aux --sort=-%cpu | head -n 6
+
+#5 top 5 process by mem
+
+echo "#5 top 5 mem"
+ps aux --sort=-%mem | head -n 6
+
